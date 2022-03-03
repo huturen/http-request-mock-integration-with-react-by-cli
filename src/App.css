@@ -1,0 +1,31 @@
+
+.hello {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+h5 {
+  font-size: 14px;
+}
+.request {
+  margin: 30px;
+  width: 50%;
+  margin: 0 auto;
+  min-width: 750px;
+  text-align: left;
+}
+select, button {
+  border: 1px dashed red;
+  margin: 0 3px;
+}
+.separator {
+  border-top: 0px dashed black;
+  margin: 10px 0;
+}
+
+.codes {
+  text-align: left;
+  margin-bottom: -2px;
+}
