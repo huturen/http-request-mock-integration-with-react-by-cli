@@ -17,6 +17,8 @@ const urls =  {
   'https://jsonplaceholder.typicode.com/header': require('!!raw-loader!./mock/samples/header.js').default,
   'https://jsonplaceholder.typicode.com/request-info?a=1': require('!!raw-loader!./mock/samples/request.js').default,
   'https://jsonplaceholder.typicode.com/cache': require('!!raw-loader!./mock/samples/cache.js').default,
+  'https://jsonplaceholder.typicode.com/remote': require('!!raw-loader!./mock/samples/remote.js').default,
+  'https://jsonplaceholder.typicode.com/proxy-mode': require('!!raw-loader!./mock/samples/proxy.js').default,
 };
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
     },
     doRequest() {
       this.btnText = 'Loading...';
+      this.responseBody = '';
       const now = Date.now();
       axios.get(this.url).then(res => {
         this.spent = Date.now() - now;
@@ -47,7 +50,7 @@ function App() {
         this.btnText = 'Request';
         console.log('error:', err);
       });
-    }
+    },
   });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { state.onUrlChange(); }, []);

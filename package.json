@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.0",
     "highlight.js": "^11.4.0",
-    "http-request-mock": "^1.5.11",
+    "http-request-mock": "^1.6.8",
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "mock-dev": "http-request-mock-cli -d src/mock -w \"react-scripts start\"",
+    "mock-dev2": "http-request-mock-cli -p matched -d src/mock -w \"react-scripts start\"",
     "gen-proto": "http-request-mock-cli -d src/mock --proto",
     "build": "react-scripts build",
     "test": "react-scripts test",
