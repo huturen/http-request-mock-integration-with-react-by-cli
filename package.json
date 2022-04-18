@@ -43,6 +43,6 @@
     ]
   },
   "devDependencies": {
-    "http-request-mock": "^1.6.10"
+    "http-request-mock": "^1.6.15"
   }
 }
