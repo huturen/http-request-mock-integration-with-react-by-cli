@@ -3,7 +3,7 @@ let mocker;
 
 if (process.env.NODE_ENV === "development") {
   const HttpRequestMock = require("http-request-mock");
-  mocker = HttpRequestMock.setup("marked@localhost:9001");
+  mocker = HttpRequestMock.setup();
   mocker.mock({
     "url": "/getResult",
     "body": require('./proto/getResult.js'),
@@ -79,10 +79,7 @@ if (process.env.NODE_ENV === "development") {
     "url": "https://jsonplaceholder.typicode.com/remote",
     "method": "GET",
     "body": require('./samples/remote.js'),
-    "header": {
-      "content-type": "application/json"
-    },
-    "remote": "https://jsonplaceholder.typicode.com/posts/1"
+    "remote": "http://jsonplaceholder.typicode.com/posts/1?a=1"
   });
   mocker.mock({
     "url": "https://jsonplaceholder.typicode.com/request-info",

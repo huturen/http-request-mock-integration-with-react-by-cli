@@ -17,8 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "mock-dev": "http-request-mock-cli -p marked -d src/mock -w \"react-scripts start\"",
-    "mock-dev2": "http-request-mock-cli -p matched -d src/mock -w \"react-scripts start\"",
+    "mock-dev": "http-request-mock-cli -d src/mock -w \"react-scripts start\"",
+    "mock-dev2": "http-request-mock-cli -p marked -d src/mock -w \"react-scripts start\"",
     "gen-proto": "http-request-mock-cli -d src/mock --proto",
     "build": "react-scripts build",
     "test": "react-scripts test",
