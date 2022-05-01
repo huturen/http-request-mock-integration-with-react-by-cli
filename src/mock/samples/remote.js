@@ -1,6 +1,6 @@
 /**
  * @url https://jsonplaceholder.typicode.com/remote
- * @remote http://jsonplaceholder.typicode.com/posts/1?a=1
+ * @remote https://jsonplaceholder.typicode.com/posts/1
  * @method get
  */
 module.exports = function (remote) {
